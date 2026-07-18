@@ -1,7 +1,7 @@
 import os
 import discord
 from discord import app_commands
-
+from datetime import datetime
 intents = discord.Intents.default()
 
 class MyClient(discord.Client):
@@ -27,7 +27,23 @@ async def love(interaction: discord.Interaction):
     )
 
     await interaction.response.send_message(embed=embed)
+@client.tree.command(name="days", description="Kaçıncı günümüz? 💕")
+async def days(interaction: discord.Interaction):
+    start_date = datetime(2026, 4, 19)
+    today = datetime.now()
 
+    day_count = (today - start_date).days + 1
+
+    embed = discord.Embed(
+        title="📅 NisaKalpBerat",
+        description=(
+            f"💖 Bugün birlikte **{day_count}. gününüz!**\n\n"
+            "🎉 3. ay dönümünüze çok az kaldı! 🤍"
+        ),
+        color=0xff69b4
+    )
+
+    await interaction.response.send_message(embed=embed)
 token = os.getenv("DISCORD_TOKEN")
 
 client.run(token)
