@@ -66,6 +66,7 @@ async def baby(interaction: discord.Interaction):
         color=0xff69b4
     )
 
-    interaction.response.send_message(embed=embed)
-    token = os.getenv("DISCORD_TOKEN")
+        await interaction.response.send_message(embed=embed)
+
+token = os.getenv("DISCORD_TOKEN")
 client.run(token)
