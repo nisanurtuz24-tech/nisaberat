@@ -45,39 +45,27 @@ async def days(interaction: discord.Interaction):
     )
 
     await interaction.response.send_message(embed=embed)
-token = os.getenv("DISCORD_TOKEN")
-@client.tree.command(name="love", ...)
-async def love(...):
-    ...
-
-@client.tree.command(name="days", ...)
-async def days(...):
-    ...
-    await interaction.response.send_message(embed=embed)
-
 
 @client.tree.command(name="baby", description="Bebeğiniz nasıl olacak? 👶")
 async def baby(interaction: discord.Interaction):
-    chance = random.randint(1, 100)
+    results = [
+        "👧 Bir kızınız olacak! 🎀",
+        "👦 Bir oğlunuz olacak! 💙",
+        "👶👶 İkiz bebekleriniz olacak! 💕",
+        "👶👶👶 Üçüz bebekleriniz olacak! 🎉",
+        "👶👶👶👶 Dördüz bebekleriniz olacak! 🤯",
+        "🏳️‍⚧️ Çocuğunuz trans doğdu!",
+        "🏳️‍🌈 Çocuğunuz lezboş doğdu! 😭"
+    ]
 
-    if chance <= 40:
-        result = "👧 Bir kızınız olacak! 🎀"
-    elif chance <= 80:
-        result = "👦 Bir oğlunuz olacak! 💙"
-    elif chance <= 95:
-        result = "👶👶 Sürpriz! İkiz bebekleriniz olacak! 💞"
-    else:
-        result = "👶👶👶 İNANILMAZ! Üçüz bebekleriniz olacak! 🎉"
+    result = random.choice(results)
 
     embed = discord.Embed(
         title="🍼 NisaKalpBerat",
-        description=f"{result}\n\n🤍 Umarız çok mutlu bir aileniz olur. 💖",
+        description=result,
         color=0xff69b4
     )
 
     await interaction.response.send_message(embed=embed)
-
-token = os.getenv("DISCORD_TOKEN")
-
-
+    token = os.getenv("DISCORD_TOKEN")
 client.run(token)
