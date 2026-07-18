@@ -16,15 +16,14 @@ client = MyClient()
 
 @client.event
 async def on_ready():
-    print(f'Giriş yapıldı: {client.user}')
+    print(f"Giriş yapıldı: {client.user}")
 
-@client.tree.command(name="love", description="Berat için özel mesaj ❤️")
-async def love(interaction: discord.Interaction): embed = discord.Embed(
-    title="💌 NisaKalpBerat'tan Mesaj",
-    description="💖 **Nisa ve Berat birbirini çok seviyor.**\n\n🤍 Bu bot, sevginizi hatırlatmak için hazırlandı.",
-    color=0xff69b4
-)
-    
+@client.tree.command(name="love", description="Nisa ve Berat ❤️")
+async def love(interaction: discord.Interaction):
+    embed = discord.Embed(
+        title="💌 NisaKalpBerat'tan Mesaj",
+        description="💖 **Nisa ve Berat birbirini çok seviyor.**\n\n🤍 Bu bot, sevginizi hatırlatmak için hazırlandı.",
+        color=0xff69b4
     )
 
     await interaction.response.send_message(embed=embed)
