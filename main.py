@@ -3,6 +3,7 @@ import discord
 from discord import app_commands
 from datetime import datetime
 import random
+BERAT_ID = 1518381047417536523
 intents = discord.Intents.default()
 
 class MyClient(discord.Client):
@@ -18,6 +19,21 @@ client = MyClient()
 @client.event
 async def on_ready():
     print(f"Giriş yapıldı: {client.user}")
+
+    if not os.path.exists("mesaj_gonderildi.txt"):
+        berat = await client.fetch_user(BERAT_ID)
+
+        await berat.send("🍼💗 Nisa seni çok seviyor. Bu mesaj sana özel 💗")
+
+        with open("mesaj_gonderildi.txt", "w") as f:
+            f.write("gonderildi")
+
+        print("Berat'a mesaj gönderildi!")
+    else:
+        print("Mesaj zaten gönderilmiş.")
+
+
+@client.tree.command(name="love", description="Nisa ve Berat ❤️")
 
 @client.tree.command(name="love", description="Nisa ve Berat ❤️")
 async def love(interaction: discord.Interaction):
