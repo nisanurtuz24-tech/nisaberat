@@ -33,7 +33,6 @@ async def on_ready():
         print("Mesaj zaten gönderilmiş.")
 
 
-@client.tree.command(name="love", description="Nisa ve Berat ❤️")
 
 @client.tree.command(name="love", description="Nisa ve Berat ❤️")
 async def love(interaction: discord.Interaction):
