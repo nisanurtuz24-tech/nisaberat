@@ -3,7 +3,7 @@ import discord
 from discord import app_commands
 from datetime import datetime
 import random
-BERAT_ID = 1518381047417536523
+BERAT_ID = 244895648879607808
 intents = discord.Intents.default()
 
 class MyClient(discord.Client):
@@ -23,7 +23,7 @@ async def on_ready():
     if not os.path.exists("mesaj_gonderildi.txt"):
         berat = await client.fetch_user(BERAT_ID)
 
-        await berat.send("🍼💗 Nisa seni çok seviyor. Bu mesaj sana özel 💗")
+        await berat.send("askim seni cok seviyorum hayatima girdiginden beri her sey cok degisti kendimi yalniz hissetsem bile yanimda sen vardin. seninle gecirdigim tum anlar benim icin cok degerli ben bi daha birine karsi boyle hissedebilecegimi sanmiyorum sana cok ama cok asigim💞 umarim hep hayatimda olursun ve uep heraber oluruz sevgilim 222 💗")
 
         with open("mesaj_gonderildi.txt", "w") as f:
             f.write("gonderildi")
