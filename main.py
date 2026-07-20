@@ -19,32 +19,32 @@ playlist_songs = [
     {
         "song": "Herkesim",
         "artist": "Aqtaii",
-        "gif": "https://tenor.com/tr/view/hello-kitty-dear-daniel-kiss-cute-gif-15829826"
+        "gif": "https://c.tenor.com/cA57Eoie-wYAAAAd/tenor.gif"
     },
     {
         "song": "Bize Has",
         "artist": "Sibel Can",
-        "gif": "https://tenor.com/tr/view/my-little-pony-twilight-sparkles-pinkie-pie-kiss-gif-14364376922814963375"
+        "gif": "https://media1.tenor.com/m/5o4mBp6ppKIAAAAd/ck006-aladdin.gif"
     },
     {
         "song": "Aşkım",
         "artist": "Bengü",
-        "gif": "https://tenor.com/tr/view/kiss-kissing-lesbian-anime-strawberry-panic-gif-9155305389744741940"
+        "gif": "https://media.gifdb.com/hello-kitty-daniel-kiss-3ip9w41r7cw1d55s.gif"
     },
     {
         "song": "Dinle Beni Bi'",
         "artist": "Yüzyüzeyken Konuşuruz",
-        "gif": "https://tenor.com/tr/view/renako-mai-kiss-kisses-freak-out-gif-13220785228267010349"
+        "gif": "https://media.gifdb.com/strawberry-panic-kiss-5x6z8v3p0s.gif"
     },
     {
         "song": "Him & I",
         "artist": "G-Eazy & Halsey",
-        "gif": "https://tenor.com/tr/view/lesbian-gif-22079307"
+        "gif": "https://media.gifdb.com/anime-girls-kiss-l4bqg1u5j.gif"
     },
     {
         "song": "Eskisi Gibi",
         "artist": "Lil Zey & Kozmos",
-        "gif": "https://tenor.com/tr/view/ck006-aladdin-disney-toon-disney-jasmine-gif-8200920"
+        "gif": "https://media.gifdb.com/pinkie-pie-kiss-hug-r1m4v8l2.gif"
     }
 ]
 
