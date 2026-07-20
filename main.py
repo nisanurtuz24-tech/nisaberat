@@ -15,7 +15,7 @@ class MyClient(discord.Client):
 
 client = MyClient()
 
-playlist = [
+playlist_songs = [
     {
         "song": "Herkesim",
         "artist": "Aqtaii",
