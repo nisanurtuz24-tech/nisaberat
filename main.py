@@ -48,6 +48,48 @@ playlist_songs = [
     }
 ]
 
+tarot_cards = [
+    {
+        "card": "💞 The Lovers",
+        "meaning": "Aranızdaki sevgi ve bağ çok güçlü görünüyor.",
+        "advice": "Birbirinize güvenmeye ve sevginizi göstermeye devam edin."
+    },
+    {
+        "card": "💍 The Promise",
+        "meaning": "Sadakat, bağlılık ve uzun süreli bir bağ enerjisi taşıyor.",
+        "advice": "Verdiğiniz sözleri ve özel anlarınızı değerli tutun."
+    },
+    {
+        "card": "🌹 The Rose",
+        "meaning": "Romantik ve güzel zamanlar sizi bekliyor.",
+        "advice": "Küçük sürprizler ilişkinizi daha da güçlendirebilir."
+    },
+    {
+        "card": "🪽 The Angel",
+        "meaning": "Koruyucu ve huzurlu bir enerji sizinle.",
+        "advice": "Sizi seven insanlarla bağınızı koruyun."
+    },
+    {
+        "card": "⭐ The Star",
+        "meaning": "Umut ve mutluluk kartı. Güzel başlangıçlar yakında.",
+        "advice": "Birlikte hayaller kurmaya devam edin."
+    },
+    {
+        "card": "🦋 The Butterfly",
+        "meaning": "Birlikte büyüme ve değişim dönemi.",
+        "advice": "Değişimlerden korkmayın, beraber gelişin."
+    },
+    {
+        "card": "🛡️ The Shield",
+        "meaning": "İlişkinizi korumanız gereken bir dönem.",
+        "advice": "Herkesle her şeyi paylaşmayın, özelinizi koruyun."
+    },
+    {
+        "card": "🫶 The Soulmate",
+        "meaning": "Derin bir uyum ve güçlü bir bağ sembolü.",
+        "advice": "Birbirinizin kalbini dinlemeye devam edin."
+    }
+]
 @client.event
 async def on_ready():
     print(f"Giriş yapıldı: {client.user}")
@@ -115,6 +157,33 @@ async def playlist(interaction: discord.Interaction):
     )
 
     embed.set_image(url=music["gif"])
+
+    await interaction.response.send_message(embed=embed)
+    
+    @client.tree.command(name="fortune", description="🔮 Aşk tarotunuz.")
+async def fortune(interaction: discord.Interaction):
+
+    card = random.choice(tarot_cards)
+
+    embed = discord.Embed(
+        title="🔮 Love Tarot",
+        description=f"✨ Kartınız: **{card['card']}**",
+        color=0xff69b4
+    )
+
+    embed.add_field(
+        name="💗 Yorum",
+        value=card["meaning"],
+        inline=False
+    )
+
+    embed.add_field(
+        name="🌙 Tavsiye",
+        value=card["advice"],
+        inline=False
+    )
+
+    embed.set_footer(text="NisaKalpBerat 🔮💕")
 
     await interaction.response.send_message(embed=embed)
 token = os.getenv("DISCORD_TOKEN")
