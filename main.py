@@ -118,4 +118,5 @@ async def playlist(interaction: discord.Interaction):
 
     await interaction.response.send_message(embed=embed)
 token = os.getenv("DISCORD_TOKEN")
+print(f"Token bulundu mu? {token is not None}")
 client.run(token)
