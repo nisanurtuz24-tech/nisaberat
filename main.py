@@ -160,7 +160,7 @@ async def playlist(interaction: discord.Interaction):
 
     await interaction.response.send_message(embed=embed)
     
-    @client.tree.command(name="fortune", description="🔮 Aşk tarotunuz.")
+@client.tree.command(name="fortune", description="🔮 Aşk tarotunuz.")
 async def fortune(interaction: discord.Interaction):
 
     card = random.choice(tarot_cards)
