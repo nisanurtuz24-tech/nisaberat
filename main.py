@@ -101,7 +101,7 @@ async def baby(interaction: discord.Interaction):
     await interaction.response.send_message(embed=embed)
 @client.tree.command(name="playlist", description="🎧 Size özel bir şarkı önerir.")
 async def playlist(interaction: discord.Interaction):
-    music = random.choice(playlist)
+    music = random.choice(playlist_songs)
 
     embed = discord.Embed(
         title="🎧 Our Playlist",
